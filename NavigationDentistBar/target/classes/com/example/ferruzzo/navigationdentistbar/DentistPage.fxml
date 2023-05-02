@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ferruzzo.navigationdentistbar.DentistPageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="214.0" layoutY="109.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="49.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stetoscopicV2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="57.0" layoutY="8.0" text="Studio Dentistico">
+                           <font>
+                              <Font name="Dubai Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="35.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@doctorLogIn.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="27.0" layoutY="180.0" text="Benvenuto Dottor. Marco">
+                           <font>
+                              <Font name="Times New Roman Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="84.0" layoutX="123.0" layoutY="216.0" startX="-100.0" />
+                        <Button fx:id="dashboard_btn" alignment="CENTER_RIGHT" layoutX="21.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="189.0" text="Dashboard" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Dubai Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="30.0" fitWidth="76.0" layoutX="36.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@dashboard.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="pazienti_btn" alignment="CENTER_RIGHT" layoutX="21.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="189.0" text="Lista Pazienti" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Dubai Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="medicinale_btn" alignment="CENTER_RIGHT" layoutX="21.0" layoutY="355.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="189.0" text="Acquisto Medicinale" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Dubai Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="30.0" fitWidth="76.0" layoutX="36.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@dashboard.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="76.0" layoutX="35.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="555.0" prefWidth="872.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="207.0" layoutY="78.0" prefHeight="555.0" prefWidth="884.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="daschboard_form" prefHeight="344.0" prefWidth="884.0">
+                                 <children>
+                                    <AreaChart layoutX="136.0" layoutY="-11.0" prefHeight="389.0" prefWidth="884.0" title="data recap" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="351.0" prefHeight="190.0" prefWidth="857.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="280.0">
+                                       <children>
+                                          <ImageView fitHeight="75.0" fitWidth="81.0" layoutX="14.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@check.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="89.0" layoutY="161.0" text="ACQUISTO MEDICINALI">
+                                             <font>
+                                                <Font name="Dubai Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="233.0" layoutY="14.0" prefHeight="35.0" prefWidth="33.0" text="0">
+                                             <font>
+                                                <Font name="Dubai Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="289.0" prefHeight="200.0" prefWidth="280.0">
+                                       <children>
+                                          <ImageView fitHeight="75.0" fitWidth="81.0" layoutX="14.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@soldi.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label alignment="CENTER" layoutX="198.0" layoutY="11.0" prefHeight="35.0" prefWidth="62.0" text="\$0.0">
+                                             <font>
+                                                <Font name="Dubai Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="101.0" layoutY="161.0" text="TOTALE RICAVI">
+                                             <font>
+                                                <Font name="Dubai Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="577.0" prefHeight="200.0" prefWidth="280.0">
+                                       <children>
+                                          <ImageView fitHeight="75.0" fitWidth="81.0" layoutX="9.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@users.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="87.0" layoutY="161.0" text="CLIENTI VISITATI">
+                                             <font>
+                                                <Font name="Dubai Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="231.0" layoutY="12.0" prefHeight="35.0" prefWidth="33.0" text="0">
+                                             <font>
+                                                <Font name="Dubai Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pazienti_form" layoutX="356.0" layoutY="78.0" prefHeight="555.0" prefWidth="884.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="259.0" prefWidth="883.0">
+                                 <children>
+                                    <AnchorPane layoutX="342.0" layoutY="-1.0" prefHeight="260.0" prefWidth="883.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="30.0" prefHeight="20.0" prefWidth="200.0" text="NOME: " />
+                                          <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="60.0" prefHeight="20.0" prefWidth="200.0" text="COGNOME:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="90.0" prefHeight="20.0" prefWidth="200.0" text="NUMERO DI TELEFONO:" />
+                                          <Label alignment="CENTER_RIGHT" layoutY="120.0" prefHeight="20.0" prefWidth="240.0" text="INDIRIZZO EMAIL DEL PAZIENTE O TUTORE:" />
+                                          <TextField layoutX="250.0" layoutY="28.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <TextField layoutX="250.0" layoutY="58.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <TextField layoutX="250.0" layoutY="88.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <TextField layoutX="250.0" layoutY="118.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="424.0" layoutY="30.0" prefHeight="20.0" prefWidth="220.0" text="MOTIVO DELLA VISITA:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="424.0" layoutY="61.0" prefHeight="20.0" prefWidth="220.0" text="PREFERENZE DATA E ORE DELLA VISITA:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="424.0" layoutY="91.0" prefHeight="20.0" prefWidth="220.0" text="RICHIESTE SPECIALI DEL PAZIENTE:" />
+                                          <TextField layoutX="654.0" layoutY="28.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <TextField layoutX="654.0" layoutY="59.0" prefHeight="20.0" prefWidth="150.0" />
+                                          <TextArea layoutX="654.0" layoutY="89.0" prefHeight="84.0" prefWidth="152.0" />
+                                          <HBox layoutX="230.0" layoutY="195.0" prefHeight="30.0" prefWidth="400.0">
+                                             <children>
+                                                <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefWidth="100.0" text="ADD" />
+                                                <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefWidth="100.0" text="EDIT" />
+                                                <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefWidth="100.0" text="UPGRADE" />
+                                                <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefWidth="100.0" text="DELETE" />
+                                             </children>
+                                          </HBox>
+                                          <Label layoutX="373.0" layoutY="-22.0" text="REGISTRAZIONE PAZIENTE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="255.0" prefHeight="290.0" prefWidth="884.0">
+                                 <children>
+                                    <TableView layoutX="320.0" layoutY="35.0" prefHeight="318.0" prefWidth="884.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="50.0" text="ID" />
+                                          <TableColumn prefWidth="75.0" text="NOME" />
+                                          <TableColumn prefWidth="75.0" text="COGNOME" />
+                                          <TableColumn minWidth="20.0" prefWidth="140.0" text="NUMERO DI TELEFONO" />
+                                          <TableColumn minWidth="20.0" prefWidth="140.0" text="INDIRIZZO EMAIL " />
+                                          <TableColumn minWidth="20.0" prefWidth="140.0" text="MOTIVO VISITA" />
+                                          <TableColumn minWidth="20.0" prefWidth="100.0" text="DATA E ORA" />
+                                          <TableColumn minWidth="20.0" prefWidth="140.0" text="RICHIESTE SPECIALI" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <SplitPane fx:id="medicinale_form" layoutX="229.0" layoutY="71.0" prefHeight="548.0" prefWidth="875.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" prefHeight="545.0" prefWidth="572.0">
+                                       <children>
+                                          <TableView layoutX="320.0" layoutY="35.0" prefHeight="545.0" prefWidth="572.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn prefWidth="50.0" text="ID" />
+                                                <TableColumn prefWidth="75.0" text="NOME" />
+                                                <TableColumn prefWidth="75.0" text="COGNOME" />
+                                                <TableColumn minWidth="20.0" prefWidth="90.0" text="TELEFONO" />
+                                                <TableColumn minWidth="20.0" prefWidth="140.0" text="INDIRIZZO EMAIL " />
+                                                <TableColumn minWidth="20.0" prefWidth="140.0" text="MOTIVO VISITA" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="576.0" prefHeight="546.0" prefWidth="296.0">
+                                       <children>
+                                          <Button layoutX="135.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="AGGIUNGI CARTA" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="230.0" prefHeight="17.0" prefWidth="132.0" text="COSTO MEDICINA:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="290.0" prefHeight="17.0" prefWidth="132.0" text="QUANTITÁ :" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="340.0" prefHeight="17.0" prefWidth="132.0" text="TOTALE:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="30.0" prefHeight="17.0" prefWidth="132.0" text="NOME DEL PRODOTTO:" />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="70.0" prefHeight="17.0" prefWidth="132.0" text="QUANTITÁ: " />
+                                          <Label alignment="CENTER_RIGHT" layoutX="24.0" layoutY="120.0" prefHeight="17.0" prefWidth="132.0" text="BRAND:" />
+                                          <ComboBox layoutX="166.0" layoutY="26.0" prefHeight="17.0" prefWidth="120.0" promptText="SCEGLI...." />
+                                          <ComboBox layoutX="166.0" layoutY="66.0" prefHeight="17.0" prefWidth="120.0" promptText="SCEGLI...." />
+                                          <ComboBox layoutX="166.0" layoutY="116.0" prefHeight="17.0" prefWidth="120.0" promptText="SCEGLI...." />
+                                          <Label layoutX="172.0" layoutY="230.0" prefHeight="17.0" prefWidth="114.0" text="\$0.0" />
+                                          <Label disable="true" layoutX="169.0" layoutY="290.0" prefHeight="17.0" prefWidth="114.0" text="0.0" />
+                                          <Label layoutX="166.0" layoutY="340.0" prefHeight="17.0" prefWidth="114.0" text="\$0.0" />
+                                          <Button layoutX="186.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="PAGA" />
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
